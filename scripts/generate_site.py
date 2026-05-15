@@ -17,7 +17,7 @@ def render_site(catalog: Catalog) -> str:
     for project in catalog.projects:
         categories[project.category].append(project)
 
-    total_stars = sum(project.stars for project in catalog.projects)
+    unique_clients = sorted({client for project in catalog.projects for client in project.clients})
     category_nav = "\n".join(
         f'<a href="#{html.escape(category)}">{html.escape(category)}</a>'
         for category in sorted(categories)
@@ -198,7 +198,7 @@ def render_site(catalog: Catalog) -> str:
       </div>
       <aside class="stats" aria-label="Catalog stats">
         <div class="stat"><strong>{len(catalog.projects)}</strong><span>curated projects</span></div>
-        <div class="stat"><strong>{total_stars:,}</strong><span>tracked stars</span></div>
+        <div class="stat"><strong>{len(unique_clients)}</strong><span>clients covered</span></div>
         <div class="stat"><strong>{len(categories)}</strong><span>categories</span></div>
         <ul class="top-list">{top_projects}</ul>
       </aside>

@@ -9,7 +9,7 @@
     "use_cases": ["mcp", "discovery", "tooling"],
     "stars": 86915,
     "install": "Browse the index and install MCP servers manually or through your client.",
-    "why_it_matters": "MCP discovery is one of the clearest star-proven demand centers in agentic development.",
+    "why_it_matters": "MCP directories help developers find tool integrations without searching every client ecosystem separately.",
     "caveats": "Large lists need extra vetting before installing third-party servers.",
     "tags": ["mcp", "directory", "servers", "tools"]
   },
@@ -37,7 +37,7 @@
     "use_cases": ["memory", "continuity", "context"],
     "stars": 75869,
     "install": "Follow the upstream installation guide for your coding agent.",
-    "why_it_matters": "Memory is the strongest current developer demand signal in AI coding-agent workflows.",
+    "why_it_matters": "Persistent memory helps long-running agent work survive across sessions and branches.",
     "caveats": "Memory systems can inject stale or low-quality context if not maintained.",
     "tags": ["memory", "context", "sessions", "persistence"]
   },
@@ -65,7 +65,7 @@
     "use_cases": ["discovery", "skills", "plugins"],
     "stars": 43802,
     "install": "Browse categories and install tools from their upstream repositories.",
-    "why_it_matters": "A high-star ecosystem map proves demand for agentic coding entry points.",
+    "why_it_matters": "Broad ecosystem maps help developers compare tools before committing to a workflow.",
     "caveats": "Claude-specific; not every item transfers cleanly to Codex or Cursor.",
     "tags": ["awesome", "claude-code", "plugins", "skills"]
   },
@@ -135,7 +135,7 @@
     "use_cases": ["skills", "workflow", "automation"],
     "stars": 9728,
     "install": "Browse skill folders and install selected skills into your Codex setup.",
-    "why_it_matters": "Codex skills are near the 10k-star threshold and still early.",
+    "why_it_matters": "Codex skills make repeatable agent workflows easier to share and install.",
     "caveats": "Skill quality and maintenance differ by contributor.",
     "tags": ["codex", "skills", "automation", "workflow"]
   },

@@ -1,32 +1,13 @@
 # Agentic Index
 
-**Stop hunting through awesome lists. Pick your agent stack in seconds.**
+Find practical tools for your AI coding-agent setup.
 
-Agentic Index is a structured, installable map of the AI coding-agent ecosystem:
-Codex skills, Claude Code workflows, MCP servers, memory layers, HUDs, session
-tools, orchestration, and safety utilities.
+Agentic Index is a structured catalog and small CLI for comparing Codex skills,
+Claude Code tools, MCP servers, memory systems, HUDs, session search, workflow
+kits, and agent safety utilities.
 
-It is not another static awesome list. The repo ships a machine-readable catalog,
-a zero-dependency CLI, generated Markdown, and a generated static site from the
-same source of truth.
-
-## Why This Exists
-
-The strongest public demand signals in AI coding are ecosystem entry points and
-workflow accelerators:
-
-| Signal | Stars tracked during launch research |
-| --- | ---: |
-| `awesome-mcp-servers` | 86k+ |
-| `claude-mem` | 75k+ |
-| `get-shit-done` | 62k+ |
-| `context7` | 55k+ |
-| `awesome-claude-code` | 43k+ |
-| `claude-hud` | 22k+ |
-| `awesome-codex-skills` | 9k+ |
-
-Those projects prove the heat. Agentic Index turns that scattered ecosystem into
-a practical, queryable stack map.
+Use it when you are building an agent stack and want a short list of relevant
+projects instead of another long browser tab pile.
 
 ## Quick Start
 
@@ -36,7 +17,27 @@ cd agentic-index
 PYTHONPATH=src python3 -m agentic_index.cli recommend --client codex --goal skills
 ```
 
-Useful commands:
+Example output:
+
+```text
+awesome-codex-skills             9,728  skills        codex
+  Curated practical Codex skills for automating workflows across Codex CLI and API.
+codex-skill-manager              1,046  skills        codex
+  macOS app for managing Codex skills.
+```
+
+## What It Helps With
+
+- Find tools by client: Codex, Claude Code, Cursor, Gemini, MCP, and more.
+- Compare projects by category, use case, install path, caveats, and stars.
+- Build a starter stack for skills, memory, MCP, HUDs, session search, or orchestration.
+- Export the catalog as Markdown or JSON for your own docs and tools.
+
+The catalog is intentionally selective. It favors projects that are useful to
+working developers, have public setup instructions, and solve a clear part of
+the agentic coding workflow.
+
+## Commands
 
 ```bash
 PYTHONPATH=src python3 -m agentic_index.cli list --limit 10
@@ -44,52 +45,41 @@ PYTHONPATH=src python3 -m agentic_index.cli search memory
 PYTHONPATH=src python3 -m agentic_index.cli show context7
 PYTHONPATH=src python3 -m agentic_index.cli recommend --client claude-code --goal hud
 PYTHONPATH=src python3 -m agentic_index.cli export --format markdown > AGENTIC_INDEX.md
+PYTHONPATH=src python3 -m agentic_index.cli export --format json > projects.json
 ```
 
-## What You Get
+Install as a local command:
 
-- `data/projects.json`: structured catalog of agentic coding tools.
-- `agentic-index` CLI: search, show, recommend, and export.
-- `public/index.html`: generated static website.
-- `scripts/generate_site.py`: reproducible site generator.
-- `tests/`: standard-library test suite, no pytest required.
-- `docs/starter-stacks.md`: small recommended stacks by workflow.
-- `docs/ci.example.yml`: GitHub Actions workflow template.
+```bash
+python3 -m pip install -e .
+agentic-index recommend --client codex --goal skills
+```
+
+## Categories
+
+| Category | What it covers |
+| --- | --- |
+| `context` | code search, retrieval, docs, context engineering |
+| `memory` | persistent context and session continuity |
+| `skills` | reusable agent capabilities |
+| `subagents` | role-based specialist agents |
+| `mcp` | Model Context Protocol servers and directories |
+| `hud` | live visibility and status surfaces |
+| `session` | searchable histories and replay |
+| `orchestration` | parallel agents and isolated workspaces |
+| `security` | scanners, hardening, and risk tools |
+| `workflow` | repeatable development systems |
+| `learning` | maps, guides, and field manuals |
+
+## Repository Layout
+
+- `data/projects.json`: the source catalog.
+- `src/agentic_index/`: CLI, catalog loading, validation, and recommendation logic.
 - `AGENTIC_INDEX.md`: generated Markdown export.
-
-## Example Recommendations
-
-For Codex skills:
-
-```bash
-PYTHONPATH=src python3 -m agentic_index.cli recommend --client codex --goal skills
-```
-
-For Claude Code visibility:
-
-```bash
-PYTHONPATH=src python3 -m agentic_index.cli recommend --client claude-code --goal hud
-```
-
-For MCP discovery:
-
-```bash
-PYTHONPATH=src python3 -m agentic_index.cli recommend --client mcp --goal mcp
-```
-
-## Catalog Categories
-
-- `context`: documentation, code search, retrieval
-- `memory`: persistent context and session continuity
-- `skills`: reusable agent capabilities
-- `subagents`: role-based specialist agents
-- `mcp`: Model Context Protocol servers and directories
-- `hud`: live visibility and status surfaces
-- `session`: searchable histories and replay
-- `orchestration`: parallel agents and isolated workspaces
-- `security`: scanners, hardening, and risk tools
-- `workflow`: repeatable development systems
-- `learning`: maps, guides, and field manuals
+- `public/index.html`: generated static website.
+- `docs/starter-stacks.md`: small stack suggestions by workflow.
+- `docs/ci.example.yml`: GitHub Actions template.
+- `tests/`: standard-library test suite.
 
 ## Add A Project
 
@@ -98,25 +88,24 @@ Edit `data/projects.json`, then run:
 ```bash
 PYTHONPATH=src:. python3 -m unittest discover -s tests -v
 PYTHONPATH=src:. python3 scripts/generate_site.py
+PYTHONPATH=src:. python3 -m agentic_index.cli export --format markdown > AGENTIC_INDEX.md
 ```
 
-New entries should be useful to working developers, not just interesting demos.
-Prefer projects with clear installation steps, active maintenance, and visible
-community demand.
+Good entries explain:
 
-## Roadmap
+- what the project does
+- which clients it supports
+- how to install or try it
+- why a developer might choose it
+- what caveats to check before adopting it
 
-- Star and freshness refresh script.
-- Generated `AGENTIC_INDEX.md` export committed in releases.
-- Client-specific starter stacks for Codex, Claude Code, Cursor, OpenCode, and Gemini.
-- Optional GitHub Pages deployment.
-- Community-maintained quality badges.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the inclusion bar and required fields.
 
 ## Principles
 
 - Useful beats exhaustive.
 - Structured data beats hand-maintained prose.
-- Star count is a signal, not a religion.
+- Caveats belong next to recommendations.
 - No telemetry, no accounts, no paid API required.
 - Every generated artifact should be reproducible locally.
 

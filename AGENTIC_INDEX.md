@@ -45,7 +45,7 @@ Structured index of practical AI coding-agent tools.
 - Clients: `claude-code`
 - Use cases: `discovery, skills, plugins`
 - Summary: Curated skills, hooks, commands, orchestrators, applications, and plugins for Claude Code.
-- Why it matters: A high-star ecosystem map proves demand for agentic coding entry points.
+- Why it matters: Broad ecosystem maps help developers compare tools before committing to a workflow.
 - Caveats: Claude-specific; not every item transfers cleanly to Codex or Cursor.
 
 ### [Context Engineering Intro](https://github.com/coleam00/context-engineering-intro)
@@ -77,7 +77,7 @@ Structured index of practical AI coding-agent tools.
 - Clients: `claude-code, codex, cursor, opencode, gemini, mcp`
 - Use cases: `mcp, discovery, tooling`
 - Summary: The largest community index of Model Context Protocol servers.
-- Why it matters: MCP discovery is one of the clearest star-proven demand centers in agentic development.
+- Why it matters: MCP directories help developers find tool integrations without searching every client ecosystem separately.
 - Caveats: Large lists need extra vetting before installing third-party servers.
 
 ## Memory
@@ -89,7 +89,7 @@ Structured index of practical AI coding-agent tools.
 - Clients: `claude-code, codex, opencode, gemini, cursor`
 - Use cases: `memory, continuity, context`
 - Summary: Persistent context across sessions for Claude Code, Codex, Gemini, OpenCode, and more.
-- Why it matters: Memory is the strongest current developer demand signal in AI coding-agent workflows.
+- Why it matters: Persistent memory helps long-running agent work survive across sessions and branches.
 - Caveats: Memory systems can inject stale or low-quality context if not maintained.
 
 ### [Claude Memory Compiler](https://github.com/coleam00/claude-memory-compiler)
@@ -147,7 +147,7 @@ Structured index of practical AI coding-agent tools.
 - Clients: `codex`
 - Use cases: `skills, workflow, automation`
 - Summary: Curated practical Codex skills for automating workflows across Codex CLI and API.
-- Why it matters: Codex skills are near the 10k-star threshold and still early.
+- Why it matters: Codex skills make repeatable agent workflows easier to share and install.
 - Caveats: Skill quality and maintenance differ by contributor.
 
 ### [Microsoft Skills](https://github.com/microsoft/skills)
