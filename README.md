@@ -54,6 +54,7 @@ PYTHONPATH=src python3 -m agentic_index.cli export --format markdown > AGENTIC_I
 - `scripts/generate_site.py`: reproducible site generator.
 - `tests/`: standard-library test suite, no pytest required.
 - `docs/starter-stacks.md`: small recommended stacks by workflow.
+- `docs/ci.example.yml`: GitHub Actions workflow template.
 - `AGENTIC_INDEX.md`: generated Markdown export.
 
 ## Example Recommendations

@@ -34,6 +34,12 @@ agentic-index search mcp
 
 No account. No telemetry. No paid API. Just a useful map.
 
+## CI
+
+The repository includes `docs/ci.example.yml`. Copy it to
+`.github/workflows/ci.yml` after the GitHub token used for pushing has the
+`workflow` scope.
+
 ## Initial Audience
 
 - Codex users looking for skills and subagents.
